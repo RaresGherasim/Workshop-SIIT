@@ -4,4 +4,7 @@ class Player {
         this.name = name;
         this.score = 0;
     }
+    move(){
+        this.score += randomNum();
+    }
 }
