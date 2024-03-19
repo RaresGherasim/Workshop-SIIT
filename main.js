@@ -1,9 +1,10 @@
 console.log(`the game begins`);
 
 let players = [];
-players.push( new Player("Rares", "pig.jpg") );
-players.push( new Player("Diana", "cat.jpg") );
-players.push( new Player("Adi", "dog.jpg") );
+const player1 = new Player("pig.svg","Rares");
+players.push( new Player("pig.svg","Rares") );
+players.push( new Player("cat.svg","Diana") );
+players.push( new Player("giraffe.svg", "Adi") );
 
 
 function randomNum (maxValue = 10){
@@ -17,3 +18,4 @@ function movePlayer(player) {
 function newRound(){
     players.forEach(player => player.move() )
 }
+players.forEach(player => drawPlayer(player));
